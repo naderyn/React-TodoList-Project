@@ -46,11 +46,11 @@ class TodoList extends Component {
     const { todos, newTodo } = this.state;
 
     return (
-      <div>
+      <div className="container">
         <h2>To-Do List</h2>
-        <div>
-          <input type="text" value={newTodo} onChange={this.handleInputChange} />
-          <button onClick={this.handleAddTodo}>Add</button>
+        <div className="input-container">
+          <input type="text" value={newTodo} onChange={this.handleInputChange} className="input-field" />
+          <button onClick={this.handleAddTodo} className="add-button">Add</button>
         </div>
         <ul>
           {todos.map((todo, index) => (
